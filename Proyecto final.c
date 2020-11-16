@@ -91,3 +91,5 @@ void leerCoordenadas(FILE *f)
 		}		
 	}
 } 
+
+.
