@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
+#include <time.h>
 
 void iniciarTablero();
 void mostrarTablero(int band); 
@@ -144,5 +145,4 @@ void archivo(char nombre[], int tam, int edad, int ganada, int barcos){
       fclose(flujo);
       printf("DATOS GUARDADOS EXITOSAMENTE!!!!!\n\n");
    }
-   
 }	
