@@ -115,11 +115,11 @@ void leerCoordenadas(FILE *f)
 
 void archivo(char nombre[], int tam, int edad, int ganada, int barcos){
    /*la funcion recibe 4 parametros
-   char nombre[10]: es la cadena del nombre
+   char nombre[]: es la cadena del nombre
    int edad: la edad
    int ganada: recibe un 1 o un 0, si el jugador gana guardara 1
                y si pierde guardara un 0
-   int barcos: recibe el numero de barcos que logo hundir el perdedor*/
+   int barcos: recibe el numero de barcos que logo hundir si perdio*/
 
    FILE * flujo;
    flujo = fopen("informacion.txt", "a");
