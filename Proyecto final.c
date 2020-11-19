@@ -13,6 +13,7 @@ int main()
 {
 	FILE *f;
 	
+	char nombre[4];
 	int edad;
 	printf("Escribe tu nombre(4 letras) : ");
         scanf("%[^\n]", nombre);
@@ -41,6 +42,8 @@ int main()
 	system("pause");
 	return 1;
 }
+
+
 void iniciarTablero()
 {
 	int i,j;
@@ -53,6 +56,8 @@ void iniciarTablero()
 		}
 	}
 }
+
+
 void mostrarTablero(int band	)
 {
 	int i,j;
@@ -83,6 +88,7 @@ void mostrarTablero(int band	)
 	}
 }   
 
+
 void leerCoordenadas(FILE *f)
 {
 	int num, i, line,col,j;
@@ -112,6 +118,7 @@ void leerCoordenadas(FILE *f)
 		}		
 	}
 } 
+
 
 void archivo(char nombre[], int tam, int edad, int ganada, int barcos){
    /*la funcion recibe 4 parametros
