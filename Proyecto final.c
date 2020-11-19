@@ -1,16 +1,35 @@
 #include <stdio.h>
 #include <string.h>
+#include <stdlib.h>
 
 void iniciarTablero();
 void mostrarTablero(int band); 
 void leerCoordenadas(FILE *f);
-void archivo(char nombre[6], int edad, int ganada, int barcos);
+void archivo(char nombre[],int tam, int edad, int ganada, int barcos);
 
 int tablero[10][10];
 
 int main() 
 {
 	FILE *f;
+	
+	int edad;
+	printf("Escribe tu nombre(4 letras) : ");
+        scanf("%[^\n]", nombre);
+        fflush(stdin);
+        while((strlen(nombre))!=4 ){
+           fflush(stdin);
+           printf("Escribe tu nombre(4 letras) : ");
+           scanf("%[^\n]", nombre);
+           fflush(stdin);
+        }
+        printf("cual es tu edad : ");
+        scanf("%d",&edad);
+        if(edad <= 17){
+	    printf("LO SIENTO NO PUEDES JUGAR, TIENES QUE SER MAYOR DE EDAD!!!!\n");
+	    system("pause");
+	    return 0;
+	}
 	
 	iniciarTablero();
 	mostrarTablero(0);
@@ -94,7 +113,7 @@ void leerCoordenadas(FILE *f)
 	}
 } 
 
-void archivo(char nombre[6], int edad, int ganada, int barcos){
+void archivo(char nombre[], int tam, int edad, int ganada, int barcos){
    /*la funcion recibe 4 parametros
    char nombre[10]: es la cadena del nombre
    int edad: la edad
