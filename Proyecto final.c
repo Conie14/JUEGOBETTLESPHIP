@@ -14,14 +14,14 @@ int main()
 {
 	FILE *f;
 	
-	char nombre[4];
+	char nombre[10];
 	int edad;
-	printf("Escribe tu nombre(4 letras) : ");
+	printf("Escribe tu nombre(10 letras) : ");
         scanf("%[^\n]", nombre);
         fflush(stdin);
-        while((strlen(nombre))!=4 ){
+        while((strlen(nombre))!=10 ){
            fflush(stdin);
-           printf("Escribe tu nombre(4 letras) : ");
+           printf("Escribe tu nombre(10 letras) : ");
            scanf("%[^\n]", nombre);
            fflush(stdin);
         }
