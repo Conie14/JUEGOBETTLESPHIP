@@ -16,16 +16,14 @@ int main()
 	
 	char nombre[10];
 	int edad;
-	printf("Escribe tu nombre(10 letras) : ");
-        scanf("%[^\n]", nombre);
-        fflush(stdin);
-        while((strlen(nombre))!=10 ){
-           fflush(stdin);
-           printf("Escribe tu nombre(10 letras) : ");
-           scanf("%[^\n]", nombre);
-           fflush(stdin);
-        }
-        printf("cual es tu edad : ");
+
+        do{
+	    printf("Escribe tu nombre(MAX 10 letras) : ");
+            scanf("%[^\n]", nombre);
+	    fflush(stdin);
+	}while((strlen(nombre)) > 10 );
+        
+	printf("cual es tu edad : ");
         scanf("%d",&edad);
         if(edad <= 17){
 	    printf("LO SIENTO NO PUEDES JUGAR, TIENES QUE SER MAYOR DE EDAD!!!!\n");
