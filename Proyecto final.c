@@ -13,6 +13,72 @@ int tablero[10][10];
 
 int main() 
 {
+	printf("\n");
+	printf(".................................CARGANDO......................................");
+	sleep(3);
+	printf("\n");
+	printf("\n");
+	printf("__________          __    __  .__                  .__    .__          \n");
+    printf("\\______   \\_____  _/  |__/  |_|  |    ____   ______|  |__ |__|______ \n");
+    printf(" |    |  _/\\__  \\ \\   __\\   __\\  |  _/ __ \\ /  ___/|  |  \\|  |\\____ \\  \n");
+    printf(" |    |   \\ / __ \\_|  |  |  | |  |__\\  ___/ \\___ \\ |      \\  ||  |_> >    \n");
+    printf(" |______  /(______/|__|  |__| |____/ \\_____>______>|___|  /__||   __/          \n");
+    printf("       _\\/ _     _   _   _   _   _     _   _   _   _    \\/    |__|            \n");
+	printf("\n");
+	printf("\n");
+	sleep(1);
+    printf("                                  _/|                           \n");
+    printf("                                 _|:|                           \n");
+    printf("                               _|:::|                           \n");
+    printf("                         _ /|  |::::|                           \n");
+    printf("                         |::|  |::::|                           \n");
+    printf("                         |::|  |:::::)__                        \n");
+    printf("                       /:|:::: |::::::::|                       \n");
+    printf("                      :::|::::_|::::::::|                       \n");
+    printf("                ____(:::::::::::::::::::|___ _______         __ \n");
+    printf("               (::::::::::::::::::::::::|:::|::::::|  ______|::)\n");
+    printf("     ___________\\:::::::::::::::::::::::::::|:::|___|:::::::::|\n");
+    printf("     \\::::::::::::::::::::::::::::::::::::::::::::::::::::::::|\n");
+    printf("      |:::::::::::::::::::::::::::::::::::::::::::::::::::::::| \n");
+    printf("\n");
+    printf ("\n\n");
+	printf ("                        REGLAS DEL JUEGO:                          \n");
+	printf ("1. ALGO....\n");
+	printf("\n");
+	printf ("2. ALGO............................................\n");
+	printf ("\n");
+	printf ("3. ALGO...............................................\n");
+	printf ("\n");
+	printf ("4. ALGO...,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"); 
+	printf ("\n");
+	printf ("5. ALGO..............................................................\n");
+	printf ("\n");
+	printf ("6. ALGO......................................................................\n");
+	printf("\n");
+    printf("      / \\ / \\   / \\ / \\ / \\ / \\ / \\   / \\ / \\ / \\ / \\   \n");
+    printf("     ( 1 | : ) ( S   T   A   R   T ) ( G   A   M   E )             \n");
+    printf("      \\_/ \\_/   \\_/ \\_/ \\_/ \\_/ \\_/   \\_/ \\_/ \\_/ \\_/   \n");
+    printf("\n");
+	printf("\n");
+	printf("\n");
+
+
+		int fi;
+		int c;
+		int i;
+		for (i=1; i <=10; i++)
+	{
+		//lee fila y cumna ejemplo f[3] c[4]
+
+			    printf("Dame la FILA donde crees que esta el barco : ");
+				scanf("%d" ,&fi);
+
+				printf("Dame la COLUMNA donde crees que esta el barco : ");
+				scanf("%d",&c);	
+				
+	
+		
+	}
 	FILE *f;
 	
 	char nombre[10];
@@ -23,14 +89,20 @@ int main()
 	    printf("LO SIENTO NO PUEDES JUGAR, TIENES QUE SER MAYOR DE EDAD!!!!\n");
 	    system("pause");
 	    return 0;
-	}
+		}
+		
+		
+
 	
 	iniciarTablero();
 	mostrarTablero(0);
 	leerCoordenadas(f);
+
 	printf("\n");
+
+
 	mostrarTablero(1);
-		
+
 	printf("\n");		
 	system("pause");
 	return 1;
@@ -122,6 +194,11 @@ void leer_dat(char nombre[],int tam, int *edad){
         scanf("%d",edad);
 }
 
+
+
+		
+
+
 void archivo(char nombre[], int tam, int edad, int ganada, int barcos){
    /*la funcion recibe 4 parametros
    char nombre[]: es la cadena del nombre
@@ -147,3 +224,4 @@ void archivo(char nombre[], int tam, int edad, int ganada, int barcos){
       printf("DATOS GUARDADOS EXITOSAMENTE!!!!!\n\n");
    }
 }	
+
