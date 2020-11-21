@@ -63,6 +63,21 @@ int main()
 	printf("\n");
 
 
+	FILE *f;
+	
+	char nombre[10];
+	int edad;
+
+        leer_dat(nombre,10,&edad);
+	if(edad <= 17){
+	    printf("LO SIENTO NO PUEDES JUGAR, TIENES QUE SER MAYOR DE EDAD!!!!\n");
+	    system("pause");
+	    return 0;
+		}
+		
+	iniciarTablero();
+	mostrarTablero(0);
+	
 		int fi;
 		int c;
 		int i;
@@ -76,26 +91,12 @@ int main()
 				printf("Dame la COLUMNA donde crees que esta el barco : ");
 				scanf("%d",&c);	
 				
+				
 	
 		
 	}
-	FILE *f;
-	
-	char nombre[10];
-	int edad;
-
-        leer_dat(nombre,10,&edad);
-	if(edad <= 17){
-	    printf("LO SIENTO NO PUEDES JUGAR, TIENES QUE SER MAYOR DE EDAD!!!!\n");
-	    system("pause");
-	    return 0;
-		}
-		
 		
 
-	
-	iniciarTablero();
-	mostrarTablero(0);
 	leerCoordenadas(f);
 
 	printf("\n");
@@ -121,8 +122,6 @@ void iniciarTablero()
 		}
 	}
 }
-
-
 void mostrarTablero(int band	)
 {
 	int i,j;
@@ -131,7 +130,6 @@ void mostrarTablero(int band	)
 	for(i = 0; i < 10; i++)
 	printf("%d   ",i);
 	printf("\n");
-
 	for(i = 0; i < 10; i++)
 	{
 		printf("%d  ", i);
@@ -152,8 +150,6 @@ void mostrarTablero(int band	)
 	printf("\n");
 	}
 }   
-
-
 void leerCoordenadas(FILE *f)
 {
 	int num, i, line,col,j;
@@ -194,11 +190,6 @@ void leer_dat(char nombre[],int tam, int *edad){
         scanf("%d",edad);
 }
 
-
-
-		
-
-
 void archivo(char nombre[], int tam, int edad, int ganada, int barcos){
    /*la funcion recibe 4 parametros
    char nombre[]: es la cadena del nombre
@@ -206,7 +197,6 @@ void archivo(char nombre[], int tam, int edad, int ganada, int barcos){
    int ganada: recibe un 1 o un 0, si el jugador gana guardara 1
                y si pierde guardara un 0
    int barcos: recibe el numero de barcos que logo hundir si perdio*/
-
    FILE * flujo;
    flujo = fopen("informacion.txt", "a");
    if(flujo == NULL){
@@ -223,5 +213,4 @@ void archivo(char nombre[], int tam, int edad, int ganada, int barcos){
       fclose(flujo);
       printf("DATOS GUARDADOS EXITOSAMENTE!!!!!\n\n");
    }
-}	
-
+}

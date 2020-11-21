@@ -7,6 +7,7 @@ void iniciarTablero();
 void mostrarTablero(int band); 
 void leerCoordenadas(FILE *f);
 void archivo(char nombre[],int tam, int edad, int ganada, int barcos);
+void leer_dat(char nombre[],int tam, int *edad);
 
 int tablero[10][10];
 
@@ -80,20 +81,11 @@ int main()
 	}
 	FILE *f;
 	
-	char nombre[4];
+	char nombre[10];
 	int edad;
-	printf("Escribe tu nombre(4 letras) : ");
-        scanf("%[^\n]", nombre);
-        fflush(stdin);
-        while((strlen(nombre))!=4 ){
-           fflush(stdin);
-           printf("Escribe tu nombre(4 letras) : ");
-           scanf("%[^\n]", nombre);
-           fflush(stdin);
-        }
-        printf("cual es tu edad : ");
-        scanf("%d",&edad);
-        if(edad <= 17){
+
+        leer_dat(nombre,10,&edad);
+	if(edad <= 17){
 	    printf("LO SIENTO NO PUEDES JUGAR, TIENES QUE SER MAYOR DE EDAD!!!!\n");
 	    system("pause");
 	    return 0;
@@ -192,6 +184,15 @@ void leerCoordenadas(FILE *f)
 	}
 } 
 
+void leer_dat(char nombre[],int tam, int *edad){
+    do{
+		printf("Escribe tu nombre(MAX 10 letras) : ");
+        scanf("%[^\n]", nombre);
+		fflush(stdin);
+	}while((strlen(nombre)) > 10 );
+        printf("cual es tu edad : ");
+        scanf("%d",edad);
+}
 
 
 
