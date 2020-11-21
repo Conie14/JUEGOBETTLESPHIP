@@ -8,6 +8,7 @@ void mostrarTablero(int band);
 void leerCoordenadas(FILE *f);
 void archivo(char nombre[],int tam, int edad, int ganada, int barcos);
 void leer_dat(char nombre[],int tam, int *edad);
+void reglas();
 
 int tablero[10][10];
 
@@ -42,19 +43,6 @@ int main()
     printf("      |:::::::::::::::::::::::::::::::::::::::::::::::::::::::| \n");
     printf("\n");
     printf ("\n\n");
-	printf ("                        REGLAS DEL JUEGO:                          \n");
-	printf ("1. ALGO....\n");
-	printf("\n");
-	printf ("2. ALGO............................................\n");
-	printf ("\n");
-	printf ("3. ALGO...............................................\n");
-	printf ("\n");
-	printf ("4. ALGO...,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,\n"); 
-	printf ("\n");
-	printf ("5. ALGO..............................................................\n");
-	printf ("\n");
-	printf ("6. ALGO......................................................................\n");
-	printf("\n");
     printf("      / \\ / \\   / \\ / \\ / \\ / \\ / \\   / \\ / \\ / \\ / \\   \n");
     printf("     ( 1 | : ) ( S   T   A   R   T ) ( G   A   M   E )             \n");
     printf("      \\_/ \\_/   \\_/ \\_/ \\_/ \\_/ \\_/   \\_/ \\_/ \\_/ \\_/   \n");
@@ -62,7 +50,8 @@ int main()
 	printf("\n");
 	printf("\n");
 
-
+    //reglas();
+	
 		int fi;
 		int c;
 		int i;
@@ -225,3 +214,46 @@ void archivo(char nombre[], int tam, int edad, int ganada, int barcos){
    }
 }	
 
+void reglas(){
+	int a=178;
+	int b=219;
+	int c=223;
+	printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a);
+	printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a);
+	printf("%c%c                                               %c%c\n",a,a,a,a);
+	printf("%c%c  %c%c%c%c   %c%c%c%c%c   %c%c%c   %c        %c%c%c%c     %c%c%c%c  %c%c\n",a,a,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,a,a);
+	printf("%c%c  %c   %c  %c      %c   %c  %c       %c    %c   %c      %c%c\n",a,a,b,b,b,b,b,b,b,b,b,a,a);
+	printf("%c%c  %c   %c  %c      %c      %c       %c    %c   %c      %c%c\n",a,a,b,b,b,b,b,b,b,b,a,a);
+	printf("%c%c  %c%c%c%c   %c%c%c%c   %c %c%c%c  %c       %c    %c    %c%c%c   %c%c\n",a,a,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,a,a);
+	printf("%c%c  %c   %c  %c      %c   %c  %c       %c%c%c%c%c%c       %c  %c%c\n",a,a,b,b,b,b,b,b,b,b,b,b,b,b,b,a,a);
+	printf("%c%c  %c   %c  %c      %c   %c  %c       %c    %c       %c  %c%c\n",a,a,b,b,b,b,b,b,b,b,b,a,a);
+	printf("%c%c  %c   %c  %c%c%c%c%c   %c%c%c   %c%c%c%c%c   %c    %c   %c%c%c%c   %c%c\n",a,a,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,b,a,a);
+	printf("%c%c                                               %c%c\n",a,a,a,a);
+	printf("%c%c                                               %c%c\n",a,a,a,a);
+	printf("%c%c     BIENVENIDO AL JUEGO DE BATALLA NAVAL      %c%c\n",a,a,a,a);
+	printf("%c%c                                               %c%c\n",a,a,a,a);
+	printf("%c%c   Tendr%cs DIEZ intentos para poder hundir     %c%c\n",a,a,160,a,a);
+	printf("%c%c   todos los barcos.                           %c%c\n",a,a,a,a);
+	printf("%c%c   Si no le atinas a la posici%cn de un barco   %c%c\n",a,a,162,a,a);
+	printf("%c%c   se te restara un intento.                   %c%c\n",a,a,a,a);
+	printf("%c%c   Pero si le atinas a la posici%cn de un       %c%c\n",a,a,162,a,a);
+	printf("%c%c   barco tus intentos seguir%cn intactos        %c%c\n",a,a,160,a,a);
+	printf("%c%c                                               %c%c\n",a,a,a,a);
+	printf("%c%c                                               %c%c\n",a,a,a,a);
+	printf("%c%c   El juego finaliza cuando todos tus          %c%c\n",a,a,a,a);
+	printf("%c%c   intentos se hayan acabado, o cuando hayas   %c%c\n",a,a,a,a);
+	printf("%c%c   hundido todos los barcos                    %c%c\n",a,a,a,a);
+	printf("%c%c                                               %c%c\n",a,a,a,a);
+	printf("%c%c                                               %c%c\n",a,a,a,a);
+	printf("%c%c                                               %c%c\n",a,a,a,a);
+	printf("%c%c        %c%c  %c  %c  %c%c%c  %c%c%c   %c%c%c  %c%c%c          %c%c\n",a,a,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,c,a,a);
+	printf("%c%c       %c    %c  %c  %c    %c  %c   %c   %c            %c%c\n",a,a,c,c,c,c,c,c,c,c,a,a);
+	printf("%c%c        %c%c  %c  %c  %c%c%c  %c%c%c    %c   %c%c%c          %c%c\n",a,a,c,c,c,c,c,c,c,c,c,c,c,c,c,c,a,a);
+	printf("%c%c          %c %c  %c  %c    %c  %c   %c   %c            %c%c\n",a,a,c,c,c,c,c,c,c,c,a,a);
+	printf("%c%c        %c%c   %c%c   %c%c%c  %c  %c   %c   %c%c%c          %c%c\n",a,a,c,c,c,c,c,c,c,c,c,c,c,c,c,a,a);
+	printf("%c%c                                               %c%c\n",a,a,a,a);
+	printf("%c%c                                               %c%c\n",a,a,a,a);
+	printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a);
+	printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a);
+	
+}
