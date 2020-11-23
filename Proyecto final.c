@@ -52,29 +52,20 @@ int main()
 	printf("\n");
 	printf("\n");
 reglas();
+	
+	
 		FILE *f;
 	int a,b,x;
-
-	char nombre[4];
-	int edad;
-	printf("Escribe tu nombre(4 letras) : ");
-	scanf("%[^\n]", nombre);
-	fflush(stdin);
-	while((strlen(nombre))!=4 ){
-		fflush(stdin);
-		printf("Escribe tu nombre(4 letras) : ");
-		scanf("%[^\n]", nombre);
-		fflush(stdin);
-	}
-	printf("cual es tu edad : ");
-	scanf("%d",&edad);
+	char nombre[10];
+        int edad;
+	leer_dat(nombre,10,&edad);
 	if(edad <= 17){
 		printf("LO SIENTO NO PUEDES JUGAR, TIENES QUE SER MAYOR DE EDAD!!!!\n");
 		system("pause");
 		return 0;
 	}
 	printf("\n");
-	printf("El tablero es el su¿iguiente: \n");
+	printf("El tablero es el suÂ¿iguiente: \n");
 
 	iniciarTablero();
 	mostrarTablero(0);
@@ -279,31 +270,59 @@ void mostrarTablero1()
 	}
 }
 
-void archivo(char nombre[], int tam, int edad, int ganada, int barcos){
-	/*la funcion recibe 4 parametros
-	char nombre[]: es la cadena del nombre
-	int edad: la edad
-	int ganada: recibe un 1 o un 0, si el jugador gana guardara 1
-	y si pierde guardara un 0
-	int barcos: recibe el numero de barcos que logo hundir si perdio*/
-
-	FILE * flujo;
-	flujo = fopen("informacion.txt", "a");
-	if(flujo == NULL){
-		perror("Error al crear el archivo\n");
-	} else {
-		if(ganada==1){
-			fprintf(flujo, "%s     %d     ganador",nombre, edad);
-			fputc('\n', flujo);
-		} else{
-			fprintf(flujo, "%s     %d     perdedor  %d    barcos hundidos",nombre, edad, barcos);
-			fputc('\n', flujo);
-		}
-		fflush(flujo);
-		fclose(flujo);
-		printf("DATOS GUARDADOS EXITOSAMENTE!!!!!\n\n");
-	}
+void leer_dat(char nombre[],int tam, int *edad){
+    do{
+		printf("Escribe tu nombre(MAX 10 letras) : ");
+        scanf("%[^\n]", nombre);
+		fflush(stdin);
+	}while((strlen(nombre)) > 10 );
+        printf("cual es tu edad : ");
+        scanf("%d",edad);
 }
+
+void archivo(char nombre[], int tam, int edad, int ganada, int barcos){
+   /*la funcion recibe 4 parametros
+   char nombre[]: es la cadena del nombre
+   int edad: la edad
+   int ganada: recibe un 1 o un 0, si el jugador gana guardara 1
+               y si pierde guardara un 0
+   int barcos: recibe el numero de barcos que logo hundir si perdio*/
+   int i;
+   FILE * flujo;
+   flujo = fopen("informacion.txt", "a");
+   if(flujo == NULL){
+      perror("Error al crear el archivo\n");
+   } else {
+      if(ganada==1){
+        
+      if(strlen(nombre) < 10){
+            fprintf(flujo, "%s",nombre);
+            for(i=strlen(nombre);i<10;i++){
+                fputc(' ', flujo);
+            }
+            fprintf(flujo, " %d     ganador",edad);
+        } else{
+            fprintf(flujo, "%s     %d     ganador",nombre, edad);
+        }
+        
+        fputc('\n', flujo);
+      } else{
+        if(strlen(nombre) < 10){
+            fprintf(flujo, "%s",nombre);
+            for(i=strlen(nombre);i<10;i++){
+                fputc(' ', flujo);
+            }
+            fprintf(flujo, " %d     perdedor  %d    barcos hundidos", edad, barcos);
+        } else{
+            fprintf(flujo, "%s     %d     perdedor  %d    barcos hundidos",nombre, edad, barcos);
+        }
+        fputc('\n', flujo);
+      }
+      fflush(flujo);
+      fclose(flujo);
+      printf("DATOS GUARDADOS EXITOSAMENTE!!!!!\n\n");
+   }
+}	
 
 void reglas(){
 	int a=178;
