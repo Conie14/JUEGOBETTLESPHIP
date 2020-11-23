@@ -11,47 +11,14 @@ int leerCoordenadas(int check);
 void archivo(char nombre[],int tam, int edad, int ganada, int barcos);
 void leer_dat(char nombre[],int tam, int *edad);
 void reglas();
+void portada();
 
 int tablero[10][10];
 
 int main() 
 {
-	printf("\n");
-	printf(".................................CARGANDO......................................");
-	sleep(3);
-	printf("\n");
-	printf("\n");
-	printf("__________          __    __  .__                  .__    .__          \n");
-    printf("\\______   \\_____  _/  |__/  |_|  |    ____   ______|  |__ |__|______ \n");
-    printf(" |    |  _/\\__  \\ \\   __\\   __\\  |  _/ __ \\ /  ___/|  |  \\|  |\\____ \\  \n");
-    printf(" |    |   \\ / __ \\_|  |  |  | |  |__\\  ___/ \\___ \\ |      \\  ||  |_> >    \n");
-    printf(" |______  /(______/|__|  |__| |____/ \\_____>______>|___|  /__||   __/          \n");
-    printf("       _\\/ _     _   _   _   _   _     _   _   _   _    \\/    |__|            \n");
-	printf("\n");
-	printf("\n");
-	sleep(1);
-    printf("                                  _/|                           \n");
-    printf("                                 _|:|                           \n");
-    printf("                               _|:::|                           \n");
-    printf("                         _ /|  |::::|                           \n");
-    printf("                         |::|  |::::|                           \n");
-    printf("                         |::|  |:::::)__                        \n");
-    printf("                       /:|:::: |::::::::|                       \n");
-    printf("                      :::|::::_|::::::::|                       \n");
-    printf("                ____(:::::::::::::::::::|___ _______         __ \n");
-    printf("               (::::::::::::::::::::::::|:::|::::::|  ______|::)\n");
-    printf("     ___________\\:::::::::::::::::::::::::::|:::|___|:::::::::|\n");
-    printf("     \\::::::::::::::::::::::::::::::::::::::::::::::::::::::::|\n");
-    printf("      |:::::::::::::::::::::::::::::::::::::::::::::::::::::::| \n");
-    printf("\n");
-    printf ("\n\n");
-    printf("      / \\ / \\   / \\ / \\ / \\ / \\ / \\   / \\ / \\ / \\ / \\   \n");
-    printf("     ( 1 | : ) ( S   T   A   R   T ) ( G   A   M   E )             \n");
-    printf("      \\_/ \\_/   \\_/ \\_/ \\_/ \\_/ \\_/   \\_/ \\_/ \\_/ \\_/   \n");
-    printf("\n");
-	printf("\n");
-	printf("\n");
-reglas();
+	portada();
+        reglas();
 	
 	
 		FILE *f;
@@ -365,5 +332,52 @@ void reglas(){
 	printf("%c%c                                               %c%c\n",a,a,a,a);
 	printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a);
 	printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a);
+	system("pause");
+	system("cls");
 	
+}
+
+void portada(){
+    int a=176;
+	printf("\n");
+	printf("\n");
+	printf("\n");
+	printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a);
+	printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a);
+	printf("%c%c                                                                         %c%c\n",a,a,a,a);
+	printf("%c%c                                                                         %c%c\n",a,a,a,a);
+	printf("%c%c  __________          __    __  .__                  .__    .__          %c%c\n",a,a,a,a);
+    printf("%c%c  \\______   \\_____  _/  |__/  |_|  |    ____   ______|  |__ |__|______   %c%c\n",a,a,a,a);
+    printf("%c%c   |    |  _/\\__  \\ \\   __\\   __\\  |  _/ __ \\ /  ___/|  |  \\|  |\\____ \\  %c%c\n",a,a,a,a);
+    printf("%c%c   |    |   \\ / __ \\_|  |  |  | |  |__\\  ___/ \\___ \\ |      \\  ||  |_> > %c%c\n",a,a,a,a);
+    printf("%c%c   |______  /(______/|__|  |__| |____/ \\_____>______>|___|  /__||   __/  %c%c\n",a,a,a,a);
+    printf("%c%c         _\\/ _     _   _   _   _   _     _   _   _   _    \\/    |__|     %c%c\n",a,a,a,a);
+    printf("%c%c                                                                         %c%c\n",a,a,a,a);
+    printf("%c%c                                                                         %c%c\n",a,a,a,a);
+    printf("%c%c                                                                         %c%c\n",a,a,a,a);
+    printf("%c%c                                  _/|                                    %c%c\n",a,a,a,a);
+    printf("%c%c                                 _|:|                                    %c%c\n",a,a,a,a);
+    printf("%c%c                               _|:::|                                    %c%c\n",a,a,a,a);
+    printf("%c%c                         _ /|  |::::|                                    %c%c\n",a,a,a,a);
+    printf("%c%c                         |::|  |::::|                                    %c%c\n",a,a,a,a);
+    printf("%c%c                         |::|  |:::::)__                                 %c%c\n",a,a,a,a);
+    printf("%c%c                       /:|:::: |::::::::|                                %c%c\n",a,a,a,a);
+    printf("%c%c                      :::|::::_|::::::::|                                %c%c\n",a,a,a,a);
+    printf("%c%c                ____(:::::::::::::::::::|___ _______         __          %c%c\n",a,a,a,a);
+    printf("%c%c               (::::::::::::::::::::::::|:::|::::::|  ______|::)         %c%c\n",a,a,a,a);
+    printf("%c%c     ___________\\:::::::::::::::::::::::::::|:::|___|:::::::::|          %c%c\n",a,a,a,a);
+    printf("%c%c     \\::::::::::::::::::::::::::::::::::::::::::::::::::::::::|          %c%c\n",a,a,a,a);
+    printf("%c%c      |:::::::::::::::::::::::::::::::::::::::::::::::::::::::|          %c%c\n",a,a,a,a);
+	printf("%c%c                                                                         %c%c\n",a,a,a,a);
+	printf("%c%c                                                                         %c%c\n",a,a,a,a);
+	printf("%c%c             / \\  / \\  / \\  / \\  / \\  / \\  / \\  / \\  / \\  / \\            %c%c\n",a,a,a,a);
+    printf("%c%c              S    T    A    R    T         G    A    M    E             %c%c\n",a,a,a,a);
+    printf("%c%c             \\_/  \\_/  \\_/  \\_/  \\_/  \\_/  \\_/  \\_/  \\_/  \\_/            %c%c\n",a,a,a,a);
+    printf("%c%c                                                                         %c%c\n",a,a,a,a);
+	printf("%c%c                                                                         %c%c\n",a,a,a,a);
+	printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a);
+	printf("%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c%c\n",a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a,a);
+	printf("\n");
+	system("pause");
+	system("cls");
 }
