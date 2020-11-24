@@ -10,6 +10,7 @@ void leerArchivos(FILE *f);
 int leerCoordenadas(int check);
 void archivo(char nombre[],int tam, int edad, int ganada, int barcos);
 void leer_dat(char nombre[],int tam, int *edad);
+void lee_archivo();
 void reglas();
 void portada();
 
@@ -290,6 +291,29 @@ void archivo(char nombre[], int tam, int edad, int ganada, int barcos){
       printf("DATOS GUARDADOS EXITOSAMENTE!!!!!\n\n");
    }
 }	
+
+void lee_archivo(){
+	FILE * lectura;
+
+    lectura= fopen("informacion.txt", "rb");
+    if (lectura == NULL){
+        perror("Error en la lectura del archivo\n\n");
+        return 0;
+    }
+
+    char caracter;
+
+	while(feof(lectura) == 0){
+		caracter = fgetc(lectura);
+		if(caracter == 'Ñ'){
+            printf("%c", 165);
+		} else{
+            printf("%c", caracter);
+		}
+	}
+
+    fclose(lectura);
+}
 
 void reglas(){
 	int a=178;
