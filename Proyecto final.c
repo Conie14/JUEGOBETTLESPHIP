@@ -308,7 +308,12 @@ void lee_archivo_dat(){
 		if(caracter == 'Ñ'){
             printf("%c", 165);
 		} else{
-            printf("%c", caracter);
+			if(caracter == 'ñ'){
+				printf("%c", 164);
+			} else{
+				printf("%c", caracter);
+			}
+            
 		}
 	}
 
