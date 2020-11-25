@@ -10,7 +10,7 @@ void leerArchivos(FILE *f);
 int leerCoordenadas(int check);
 void archivo(char nombre[],int tam, int edad, int ganada, int barcos);
 void leer_dat(char nombre[],int tam, int *edad);
-void lee_archivo();
+void lee_archivo_dat();
 void reglas();
 void portada();
 
@@ -292,7 +292,7 @@ void archivo(char nombre[], int tam, int edad, int ganada, int barcos){
    }
 }	
 
-void lee_archivo(){
+void lee_archivo_dat(){
 	FILE * lectura;
 
     lectura= fopen("informacion.txt", "rb");
